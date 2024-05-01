@@ -31,7 +31,7 @@ public class SlotSelector {
                     case "9": slotIndex = 8; break;
                 }
                 
-            } else if(board.elements[slotIndex].equals("X") || board.elements[slotIndex].equals("O") ) {
+            } else if(board.elements[slotIndex].equals("P") || board.elements[slotIndex].equals("C") ) {
                 System.out.println("Invalid choice.\n\nThis solot is already taken.\nPlease choose other slot.");
                 playerAcrions();
             } else {
@@ -51,7 +51,7 @@ public class SlotSelector {
     public int computerActions() {
         int slotChoice = index();
 
-        while (board.elements[slotChoice].equals("X") || board.elements[slotChoice].equals("O")) {
+        while (board.elements[slotChoice].equals("P") || board.elements[slotChoice].equals("C")) {
             slotChoice = index(); 
         }
         return slotChoice;

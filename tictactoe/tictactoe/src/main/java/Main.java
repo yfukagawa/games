@@ -12,8 +12,10 @@ public class Main {
         while(board.boardState() == 0) {
             playerTurn();
             stateMessage(board.boardState());
+            if(board.boardState() == 1) break;
             computerTurn();
             stateMessage(board.boardState());
+            if(board.boardState() == 1) break;
         }
 
         
@@ -22,12 +24,12 @@ public class Main {
     public static void playerTurn() {
         playerIndex = slotSelector.player();
 
-        while (board.elements[playerIndex].equals("O") || board.elements[computerIndex].equals("X")) {
+        while (board.elements[playerIndex].equals("C") || board.elements[computerIndex].equals("P")) {
             System.out.println("Invalid choice.\nThis solot is already taken.\nPlease choose other slot.");
             playerTurn();
         } 
         
-        board.elements[playerIndex] = "X";
+        board.elements[playerIndex] = "P";
     
         board.createBoard();
         state = board.boardState();
@@ -35,11 +37,11 @@ public class Main {
 
     public static void computerTurn() {
         computerIndex = slotSelector.computer();
-        while (board.elements[playerIndex].equals("O") || board.elements[computerIndex].equals("X")) {
+        while (board.elements[playerIndex].equals("C") || board.elements[computerIndex].equals("P")) {
             computerTurn();
         }
         
-        board.elements[computerIndex] = "O";
+        board.elements[computerIndex] = "C";
         
         board.createBoard();
         state = board.boardState();

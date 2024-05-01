@@ -8,14 +8,15 @@ public class Board {
         " | " +elements[3] + " | " + elements[4] + " | " + elements[5] + " | \n" + 
         "   -   -   - \n" +
         " | " +elements[6] + " | " + elements[7] + " | " + elements[8] + " | \n" +
-        "   -   -   - \n" ;
+        "   -   -   - \n " +
+        "P = Player's choice\n C = Computer's choice" ;
         System.out.println(boardVisual);
     }
 
     public int boardState() {
         int state = 0;
         for (int i = 0; i < elements.length; i++) {
-            if((elements[i].equals("O") || elements[i].equals("X")) && 
+            if((elements[i].equals("C") || elements[i].equals("P")) && 
             (
                 (elements[0].equals(elements[1]) && elements[0].equals(elements[2])) ||
                 (elements[0].equals(elements[4]) && elements[0].equals(elements[8])) ||
