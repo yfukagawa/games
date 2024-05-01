@@ -20,7 +20,7 @@ public class Board {
                 (elements[0].equals(elements[1]) && elements[0].equals(elements[2])) ||
                 (elements[0].equals(elements[4]) && elements[0].equals(elements[8])) ||
                 (elements[0].equals(elements[3]) && elements[0].equals(elements[6])) ||
-                (elements[3].equals(elements[4]) && elements[1].equals(elements[5])) ||
+                (elements[3].equals(elements[4]) && elements[3].equals(elements[5])) ||
                 (elements[6].equals(elements[7]) && elements[6].equals(elements[8])) ||
                 (elements[1].equals(elements[4]) && elements[1].equals(elements[7])) ||
                 (elements[2].equals(elements[5]) && elements[2].equals(elements[8])) ||
